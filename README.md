@@ -6,7 +6,7 @@ This is my first Vagrant VM
 
 ```$ vagrant up```
 
-- Access the VMs 
+- Access the VMs: 
 
 - Web1
 ```$ vagrant ssh web1
