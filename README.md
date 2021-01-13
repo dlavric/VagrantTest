@@ -1,6 +1,7 @@
 # Pre-Requirements
 
 1.Install the latest version of [Vagrant](https://www.vagrantup.com/docs/installation)
+
 2.Install [VirtualBox](https://www.virtualbox.org/)
 
 
