@@ -12,7 +12,7 @@ $ vagrant ssh web1
 
 $ ipconfig -a
 
-# check the inet for the hostname
+// Check the inet for the hostname
 $ curl http://hostname
 
 $ logout
@@ -22,7 +22,7 @@ $ vagrant ssh web2
 
 $ ipconfig -a
 
-# check the inet for the hostname
+// Check the inet for the hostname
 $ curl http://hostname
 
 $ logout
