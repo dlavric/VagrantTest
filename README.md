@@ -13,7 +13,7 @@ This is my first Vagrant VM
 
 $ ipconfig -a
 
-// Check the inet for the hostname, from the previous command _ipconfig -a_
+// Check the inet for the hostname, from the previous command "ipconfig -a"
 $ curl http://hostname
 
 $ logout
