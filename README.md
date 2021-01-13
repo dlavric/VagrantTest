@@ -1,6 +1,6 @@
 # VagrantTest
 
-This is my firstVagrant VM
+This is my first Vagrant VM
 
 - Start the VM
 
@@ -8,7 +8,7 @@ This is my firstVagrant VM
 
 - Access the VMs 
 
-Web1
+- Web1
 ```$ vagrant ssh web1
 
 $ ipconfig -a
@@ -19,7 +19,7 @@ $ curl http://hostname
 $ logout
 ```
 
-Web2
+- Web2
 ```$ vagrant ssh web2
 
 $ ipconfig -a
