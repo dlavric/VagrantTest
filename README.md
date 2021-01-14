@@ -12,7 +12,7 @@
 
 ## Build the VMs
 Check the 'Vagrantfile' from this repository:
-```
+```ruby
 Vagrant.configure("2") do |config|
  config.vm.box = "hashicorp/bionic64"
 
