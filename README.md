@@ -86,8 +86,6 @@ These are the IPs:
 Go to your browser and paste the following:
 
 Web 1: http://192.168.50.11
-![Screenshot](http://192.168.50.11)
-
 
 Web 2: http://192.168.50.12
-![Screenshot](http://192.168.50.12)
+
