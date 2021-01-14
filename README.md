@@ -86,6 +86,8 @@ These are the IPs:
 Go to your browser and paste the following:
 
 Web 1: http://192.168.50.11
+![Screenshot](https://raw.githubusercontent.com/dlavric/VagrantTest/main/Screenshot%202021-01-14%20at%2017.10.33.png)
 
 Web 2: http://192.168.50.12
+![Screenshot](https://raw.githubusercontent.com/dlavric/VagrantTest/main/Screenshot%202021-01-14%20at%2017.10.47.png)
 
