@@ -49,7 +49,18 @@ $ logout
 ```
 ## Connect to the Web VMs
 
-- Get the IPs
+- We need the IPs to connect to the website.
+
+- The IPs are defined in the Vagrantfile
+  
+  These are the IPs:
+```
+ Web1 IP: inet 192.168.50.11
+ 
+ Web2 IP: inet 192.168.50.12
+```
+
+- We can also find out the IPs with the Linux command `ip addr show` 
 
 ```$ ip addr show```
 ```
@@ -72,12 +83,6 @@ vagrant@myhost:~$ ip addr show
        valid_lft forever preferred_lft forever
     inet6 fe80::a00:27ff:fe1a:cbca/64 scope link 
        valid_lft forever preferred_lft forever
-```
-These are the IPs:
-```
- Web1 IP: inet 192.168.50.11
- 
- Web2 IP: inet 192.168.50.12
 ```
 
 
