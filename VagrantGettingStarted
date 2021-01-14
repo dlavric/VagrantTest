@@ -1,20 +1,25 @@
-- Create a directory to work with Vagrant
+# Create a directory to work with Vagrant
 ```
 $ mkdir VagrantTest
 $ cd VagrantTest
 ```
 
-- Create the VM by initilizing the Vagrant box Hashicorp/bionic64
+# Create the VM by initilizing the Vagrant box Hashicorp/bionic64
 ```
 $ vagrant init hashicorp/bionic64
 ```
 
-- Check the status of the VM
+# Check the status of the VM
 ```
 $ vagrant status
 ```
 
-- Stop the VM
+# Stop the VM
 ```
 $ vagrant halt
+```
+
+# Remove the VM
+```
+$ vagrant destroy
 ```
