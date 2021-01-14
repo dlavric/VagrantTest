@@ -3,25 +3,28 @@
 
 ## Pre-Requirements
 
-1.Install the latest version of [Vagrant](https://www.vagrantup.com/docs/installation)
+1. Install the latest version of [Vagrant](https://www.vagrantup.com/docs/installation)
 
-2.Install [VirtualBox](https://www.virtualbox.org/)
+2. Install [VirtualBox](https://www.virtualbox.org/)
 
 ## Clone this Repository
 
+```
+# git clone https://github.com/dlavric/VagrantTest
+# cd VagrantTest
+```
 
-## Build the VMs
-Check the 'Vagrantfile' from this repository:
+## Whats included?
+
+A `Vagrantfile` that includes 2 webservers
+
+'Vagrantfile' from this repository:
 ```ruby
 Vagrant.configure("2") do |config|
  config.vm.box = "hashicorp/bionic64"
 
  (1..2).each do |i|
    config.vm.define "web#{i}" do |web|
-     #we will setup our IPs for both web1 and web2 
-     #IPs will look like this:
-     #WEB1: 192.168.50.11
-     #WEB2: 192.168.50.12
      web.vm.network "private_network", ip: "192.168.50.#{i+10}" 
      #install webserver
      web.vm.provision "shell", inline: "apt-get update ; apt-get install -y nginx"
@@ -32,20 +35,20 @@ end
 
 ## Start the VMs
 
-```$ vagrant up```
+```
+# vagrant up
+```
 
 ## Access the VMs
 
 - Web1
 ```
-$ vagrant ssh web1
-$ logout
+# vagrant ssh web1
 ```
 
 - Web 2
 ```
-$ vagrant ssh web2
-$ logout
+# vagrant ssh web2
 ```
 ## Connect to the Web VMs
 
@@ -62,8 +65,7 @@ $ logout
 
 - We can also find out the IPs with the Linux command `ip addr show` 
 
-```$ ip addr show```
-```
+```shell
 vagrant@myhost:~$ ip addr show
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
