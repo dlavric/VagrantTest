@@ -54,6 +54,7 @@ vagrant@myhost:~$ ip addr show
        valid_lft forever preferred_lft forever
 ```
 These are the IPs:
+
  Web1 IP: inet 192.168.50.11
  
  Web2 IP: inet 192.168.50.12
@@ -61,6 +62,7 @@ These are the IPs:
 
 
 - Connect to the Website
+
 Go to your browser and paste the following:
 
 Web 1: http://192.168.50.11
