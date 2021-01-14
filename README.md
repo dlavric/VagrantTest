@@ -1,21 +1,24 @@
-# Pre-Requirements
+# This repository will guide you on how to create 2 Websites within a Vagrantfile.
+
+
+## Pre-Requirements
 
 1.Install the latest version of [Vagrant](https://www.vagrantup.com/docs/installation)
 
 2.Install [VirtualBox](https://www.virtualbox.org/)
 
-# Clone this Repository
+## Clone this Repository
 
 
-# Build the VMs
+## Build the VMs
 Check the Vagrantfile from this repository
 
 
-# Start the VMs
+## Start the VMs
 
 ```$ vagrant up```
 
-# Access the VMs
+## Access the VMs
 
 - Web1
 ```
@@ -28,7 +31,7 @@ $ logout
 $ vagrant ssh web2
 $ logout
 ```
-# Connect to the Web VMs
+## Connect to the Web VMs
 
 - Get the IPs
 
