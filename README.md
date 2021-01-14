@@ -31,6 +31,7 @@ $ logout
 # Connect to the Web VMs
 
 - Get the IPs
+
 ```$ ip addr show```
 ```
 vagrant@myhost:~$ ip addr show
