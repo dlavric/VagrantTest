@@ -53,10 +53,14 @@ vagrant@myhost:~$ ip addr show
     inet6 fe80::a00:27ff:fe1a:cbca/64 scope link 
        valid_lft forever preferred_lft forever
 ```
-Web1 IP: inet 192.168.50.11
-Web2 IP: inet 192.168.50.12
+These are the IPs:
+- Web1 IP: inet 192.168.50.11
+
+- Web2 IP: inet 192.168.50.12
 
 - Connect to the Websites
 Go to your browser and paste the following:
+
 Web 1: http://192.168.50.11
+
 Web 2: http://192.168.50.12
