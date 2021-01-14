@@ -11,8 +11,24 @@
 
 
 ## Build the VMs
-Check the Vagrantfile from this repository
+Check the 'Vagrantfile' from this repository:
+```
+Vagrant.configure("2") do |config|
+ config.vm.box = "hashicorp/bionic64"
 
+ (1..2).each do |i|
+   config.vm.define "web#{i}" do |web|
+     #we will setup our IPs for both web1 and web2 
+     #IPs will look like this:
+     #WEB1: 192.168.50.11
+     #WEB2: 192.168.50.12
+     web.vm.network "private_network", ip: "192.168.50.#{i+10}" 
+     #install webserver
+     web.vm.provision "shell", inline: "apt-get update ; apt-get install -y nginx"
+  end
+ end
+end
+```
 
 ## Start the VMs
 
@@ -70,5 +86,8 @@ These are the IPs:
 Go to your browser and paste the following:
 
 Web 1: http://192.168.50.11
+![Screenshot](http://192.168.50.11)
+
 
 Web 2: http://192.168.50.12
+![Screenshot](http://192.168.50.12)
