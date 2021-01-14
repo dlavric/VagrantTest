@@ -4,6 +4,8 @@
 
 2.Install [VirtualBox](https://www.virtualbox.org/)
 
+# Clone this Repository
+
 
 # Build the VMs
 Check the Vagrantfile from this repository
@@ -29,60 +31,32 @@ $ logout
 # Connect to the Web VMs
 
 - Get the IPs
-```$ ipconfig -a```
+```$ ip addr show```
 ```
-vagrant@vagrant:~$ ifconfig -a
-eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
-        inet6 fe80::a00:27ff:febb:1475  prefixlen 64  scopeid 0x20<link>
-        ether 08:00:27:bb:14:75  txqueuelen 1000  (Ethernet)
-        RX packets 642  bytes 82720 (82.7 KB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 479  bytes 81402 (81.4 KB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
-        inet 127.0.0.1  netmask 255.0.0.0
-        inet6 ::1  prefixlen 128  scopeid 0x10<host>
-        loop  txqueuelen 1000  (Local Loopback)
-        RX packets 12  bytes 1152 (1.1 KB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 12  bytes 1152 (1.1 KB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+vagrant@myhost:~$ ip addr show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:bb:14:75 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic eth0
+       valid_lft 70875sec preferred_lft 70875sec
+    inet6 fe80::a00:27ff:febb:1475/64 scope link 
+       valid_lft forever preferred_lft forever
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:1a:cb:ca brd ff:ff:ff:ff:ff:ff
+    inet 192.168.50.11/24 brd 192.168.50.255 scope global eth1
+       valid_lft forever preferred_lft forever
+    inet6 fe80::a00:27ff:fe1a:cbca/64 scope link 
+       valid_lft forever preferred_lft forever
 ```
+Web1 IP: inet 192.168.50.11
+Web2 IP: inet 192.168.50.12
 
-
-- See the Web VM by using the inet IP from the previous command "ipconfig -a"
-```
-$ curl http://10.0.2.15
-```
-```
-<!DOCTYPE html>
-<html>
-<head>
-<title>Welcome to nginx!</title>
-<style>
-    body {
-        width: 35em;
-        margin: 0 auto;
-        font-family: Tahoma, Verdana, Arial, sans-serif;
-    }
-</style>
-</head>
-<body>
-<h1>Welcome to nginx!</h1>
-<p>If you see this page, the nginx web server is successfully installed and
-working. Further configuration is required.</p>
-
-<p>For online documentation and support please refer to
-<a href="http://nginx.org/">nginx.org</a>.<br/>
-Commercial support is available at
-<a href="http://nginx.com/">nginx.com</a>.</p>
-
-<p><em>Thank you for using nginx.</em></p>
-</body>
-</html>
-```
-
-- Connect to the Web
-
+- Connect to the Websites
+Go to your browser and paste the following:
+Web 1: http://192.168.50.11
+Web 2: http://192.168.50.12
